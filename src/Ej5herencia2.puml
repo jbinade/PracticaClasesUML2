@@ -1,0 +1,11 @@
+@startuml
+
+actor "cliente bancario"
+actor "cliente corporativo"
+actor "cliente normal"
+
+"cliente bancario" <|-- "cliente corporativo"
+"cliente bancario" <|-- "cliente normal"
+
+
+@enduml
