@@ -1,0 +1,13 @@
+@startuml
+
+actor Empleado
+actor Administrador
+
+rectangle "Empresa Pedidos"{
+
+}
+
+Empleado -- "Empresa Pedidos"
+Administrador -- "Empresa Pedidos"
+
+@enduml
