@@ -1,0 +1,9 @@
+@startuml
+
+actor bibliotecario
+
+bibliotecario --> (Baja socio)
+(Buscar socio) <.. (Baja socio) : include
+
+
+@enduml
