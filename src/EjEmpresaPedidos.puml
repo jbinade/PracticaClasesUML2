@@ -1,0 +1,34 @@
+@startuml
+
+actor Empleado
+actor Administrador
+
+rectangle "Empresa Pedidos"{
+    (Introducir pedido)
+    (Cancelar pedido)
+    (Obtener estado pedido)
+    (Borrar pedido)
+    (Buscar pedido)
+    (Alta cliente)
+    (Buscar cliente)
+    (Nuevo producto)
+    (Borrar producto)
+
+}
+
+Empleado -- (Introducir pedido)
+Empleado -- (Cancelar pedido)
+Empleado -- (Obtener estado pedido)
+Empleado -- (Borrar pedido)
+Empleado -- (Buscar pedido)
+Empleado -- (Alta cliente)
+Empleado -- (Buscar cliente)
+
+Administrador -- (Nuevo producto)
+Administrador -- (Borrar producto)
+
+
+
+
+
+@enduml
