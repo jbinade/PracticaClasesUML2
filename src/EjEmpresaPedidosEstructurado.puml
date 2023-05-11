@@ -1,11 +1,19 @@
 @startuml
-'https://plantuml.com/sequence-diagram
 
-autonumber
+actor Empleado
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+Empleado -- (Alta cliente)
+Empleado -- (Introducir pedido)
+Empleado -- (Obtener estado pedido)
+Empleado -- (Buscar pedido)
+Empleado -- (Cancelar pedido)
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+(Introducir pedido) <.. (Alta cliente) : extiende
+(Buscar cliente) <.. (Introducir pedido) : incluye
+(Introducir pedido) <.. (Pago con tarjeta) : extiende
+(Introducir pedido) <.. (Pago en cuenta) : extiende
+(Buscar pedido) <.. (Obtener estado pedido) : incluye
+(Buscar pedido) <.. (Cancelar pedido) : incluye
+
+
 @enduml
