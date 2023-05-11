@@ -1,0 +1,20 @@
+@startuml
+
+actor Socio
+actor Bibliotecario
+
+rectangle Biblioteca {
+    (Reservar libro)
+    (Prestar libro)
+    (Devolver libro)
+    (Actualizar catalogo)
+}
+
+Socio -- (Reservar libro)
+Socio -- (Prestar libro)
+Socio -- (Devolver libro)
+Bibliotecario -- (Prestar libro)
+Bibliotecario -- (Actualizar catalogo)
+
+
+@enduml
